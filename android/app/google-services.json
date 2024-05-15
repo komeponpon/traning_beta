@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "976432364652",
+    "project_id": "traning-beta",
+    "storage_bucket": "traning-beta.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:976432364652:android:7ebb3af152928d2d87ec49",
+        "android_client_info": {
+          "package_name": "com.example.traning_beta"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAP731AAtuzE-OR0NaIZmjV2B8EXBlOqmE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
