@@ -30,7 +30,10 @@ class HomeScreen extends StatelessWidget {
           padding: const EdgeInsets.all(16.0),
           child: Column(
             children: [
-              SizedBox(height: 16.0),
+              //トレーニングプランボタン
+              SizedBox(
+                height: 16.0,
+              ),
               Container(
                 padding: EdgeInsets.all(16.0),
                 decoration: BoxDecoration(
@@ -62,6 +65,8 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
               ),
+
+              //トレーニング目標
               SizedBox(height: 16.0),
               Container(
                 padding: EdgeInsets.all(16.0),
@@ -70,25 +75,40 @@ class HomeScreen extends StatelessWidget {
                   borderRadius: BorderRadius.circular(8.0),
                 ),
                 child: Column(
+                  //crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('トレーニング目標',
-                        style: TextStyle(
-                            fontSize: 16, fontWeight: FontWeight.bold)),
-                    SizedBox(height: 16.0),
-                    CircleAvatar(
-                      radius: 40,
-                      backgroundColor: Colors.grey,
+                    Text(
+                      'トレーニング目標',
+                      style:
+                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                     ),
                     SizedBox(height: 16.0),
-                    Text('目標達成率', style: TextStyle(fontSize: 16)),
-                    Text(
-                      '-%',
-                      style:
-                          TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        CircleAvatar(
+                          radius: 40,
+                          backgroundColor: Colors.grey,
+                        ),
+                        SizedBox(width: 16.0),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Text('目標達成率', style: TextStyle(fontSize: 16)),
+                            Text(
+                              '-%',
+                              style: TextStyle(
+                                  fontSize: 24, fontWeight: FontWeight.bold),
+                            ),
+                          ],
+                        ),
+                      ],
                     ),
                   ],
                 ),
               ),
+
+              //ボディデータ
               SizedBox(height: 16.0),
               Container(
                 padding: EdgeInsets.all(16.0),
@@ -97,6 +117,7 @@ class HomeScreen extends StatelessWidget {
                   borderRadius: BorderRadius.circular(8.0),
                 ),
                 child: Column(
+                  //crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text('ボディデータ',
                         style: TextStyle(
@@ -138,6 +159,8 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
       ),
+
+      //ボトムナビゲーション
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: 0,
         selectedItemColor: Color(0xFFF137F1), // カラーコードを変更
