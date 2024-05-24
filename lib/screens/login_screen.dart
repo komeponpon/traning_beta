@@ -33,28 +33,42 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text('Login'),
+        backgroundColor: Colors.white,
+        title: Text(
+          'ログイン',
+          style: TextStyle(
+              color: Color(0xFFF137F1),
+              fontWeight: FontWeight.bold,
+              fontSize: 18),
+        ),
+        centerTitle: true,
+        elevation: 0,
       ),
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.symmetric(horizontal: 30.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            SizedBox(height: 40),
             TextField(
               controller: _emailController,
-              decoration: InputDecoration(labelText: 'Email'),
+              decoration: InputDecoration(
+                labelText: 'E-mail',
+                border: OutlineInputBorder(),
+              ),
             ),
+            SizedBox(height: 40),
             TextField(
               controller: _passwordController,
-              decoration: InputDecoration(labelText: 'Password'),
+              decoration: InputDecoration(
+                labelText: 'パスワード',
+                border: OutlineInputBorder(),
+              ),
               obscureText: true,
             ),
             SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: _login,
-              child: Text('Login'),
-            ),
             TextButton(
               onPressed: () {
                 Navigator.push(
@@ -62,7 +76,29 @@ class _LoginScreenState extends State<LoginScreen> {
                   MaterialPageRoute(builder: (context) => SignupScreen()),
                 );
               },
-              child: Text('Create an account'),
+              child: Text(
+                'パスワードを忘れた場合',
+                style: TextStyle(
+                    color: Color(0xFF767676), fontWeight: FontWeight.bold),
+              ),
+            ),
+            SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: _login,
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Color(0xFFF137F1),
+                padding: EdgeInsets.symmetric(horizontal: 50, vertical: 15),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8.0),
+                ),
+              ),
+              child: Text(
+                'ログイン',
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold),
+              ),
             ),
           ],
         ),

@@ -32,9 +32,9 @@ class HomeScreen extends StatelessWidget {
             children: [
               SizedBox(height: 16.0),
               TrainingPlanButton(formattedDate: formattedDate),
-              SizedBox(height: 16.0),
+              SizedBox(height: 32.0),
               DisplayGoal(),
-              SizedBox(height: 16.0),
+              SizedBox(height: 32.0),
               BodyDataCard(),
             ],
           ),

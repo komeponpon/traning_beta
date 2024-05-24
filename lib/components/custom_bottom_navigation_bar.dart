@@ -9,7 +9,7 @@ class CustomBottomNavigationBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
-      backgroundColor: Color.fromARGB(255, 255, 255, 255),
+      backgroundColor: Colors.white, // 背景色を白に設定
       currentIndex: currentIndex,
       selectedItemColor: Color(0xFFF137F1),
       unselectedItemColor: Colors.grey,

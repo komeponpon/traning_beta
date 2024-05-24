@@ -23,9 +23,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'トレーニング記録ベータ版',
-      theme: ThemeData(
-          // アプリのテーマを設定する
-          ),
       home: LoginScreen(), // ログインページを最初に表示する
       // 他のルーティングの設定を行う
     );

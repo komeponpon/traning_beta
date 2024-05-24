@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:traning_beta/screens/login_screen.dart';
 import 'home_screen.dart';
 
 class SignupScreen extends StatefulWidget {
@@ -32,27 +33,72 @@ class _SignupScreenState extends State<SignupScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text('Signup'),
+        backgroundColor: Colors.white,
+        title: Text(
+          'サインアップ',
+          style: TextStyle(
+              color: Color(0xFFF137F1),
+              fontWeight: FontWeight.bold,
+              fontSize: 18),
+        ),
+        centerTitle: true,
+        elevation: 0,
       ),
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.symmetric(horizontal: 30.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            SizedBox(height: 40),
             TextField(
               controller: _emailController,
-              decoration: InputDecoration(labelText: 'Email'),
+              decoration: InputDecoration(
+                labelText: 'E-mail',
+                border: OutlineInputBorder(),
+              ),
             ),
+            SizedBox(height: 40),
             TextField(
               controller: _passwordController,
-              decoration: InputDecoration(labelText: 'Password'),
+              decoration: InputDecoration(
+                labelText: 'パスワード',
+                border: OutlineInputBorder(),
+              ),
               obscureText: true,
+            ),
+            SizedBox(height: 20),
+            TextButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => LoginScreen()),
+                );
+              },
+              child: Text(
+                'アカウントをお持ちですか？ ログイン',
+                style: TextStyle(
+                    color: Color(0xFF767676), fontWeight: FontWeight.bold),
+              ),
             ),
             SizedBox(height: 20),
             ElevatedButton(
               onPressed: _register,
-              child: Text('Register'),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Color(0xFFF137F1),
+                padding: EdgeInsets.symmetric(horizontal: 50, vertical: 15),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8.0),
+                ),
+              ),
+              child: Text(
+                '登録',
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold),
+              ),
             ),
           ],
         ),
