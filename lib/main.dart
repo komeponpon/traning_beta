@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:traning_beta/screens/login_screen.dart';
+import 'package:traning_beta/screens/signup_screen.dart';
 import 'package:intl/date_symbol_data_local.dart'; // 追加
 import 'firebase_options.dart';
 
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'トレーニング記録ベータ版',
-      home: LoginScreen(), // ログインページを最初に表示する
+      home: SignupScreen(), // ログインページを最初に表示する
       // 他のルーティングの設定を行う
     );
   }

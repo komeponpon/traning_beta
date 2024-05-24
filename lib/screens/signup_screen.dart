@@ -55,7 +55,7 @@ class _SignupScreenState extends State<SignupScreen> {
             TextField(
               controller: _emailController,
               decoration: InputDecoration(
-                labelText: 'E-mail',
+                labelText: 'メールアドレス',
                 border: OutlineInputBorder(),
               ),
             ),

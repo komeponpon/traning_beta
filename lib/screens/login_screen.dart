@@ -1,7 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'home_screen.dart';
-import 'signup_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -55,7 +54,7 @@ class _LoginScreenState extends State<LoginScreen> {
             TextField(
               controller: _emailController,
               decoration: InputDecoration(
-                labelText: 'E-mail',
+                labelText: 'メールアドレス',
                 border: OutlineInputBorder(),
               ),
             ),
@@ -71,10 +70,10 @@ class _LoginScreenState extends State<LoginScreen> {
             SizedBox(height: 20),
             TextButton(
               onPressed: () {
-                Navigator.push(
+                /*Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => SignupScreen()),
-                );
+                  MaterialPageRoute(builder: (context) => ページ名()),
+                );*/
               },
               child: Text(
                 'パスワードを忘れた場合',
